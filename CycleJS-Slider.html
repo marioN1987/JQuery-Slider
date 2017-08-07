@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery Cycle Plugin - Basic Demo</title>
+
+<!-- include jQuery library -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#cover').cycle({
+ 		fx:     'scrollHorz',
+        prev:   '#prev1',
+        next:   '#next1',
+        timeout: 0,
+        rev: true
+	});
+});
+</script>
+</head>
+<body>
+
+<style type="text/css">
+.wrapper{ text-align:center; }
+.slideshow{ position:relative;border:0px solid red;width:980px;display:inline-block; }
+
+#cover > img{ width:980px;height:400px; }
+
+#prev1:hover{ box-shadow:0px 0px 5px 2px #000; }
+  
+#next1:hover{ box-shadow:0px 0px 5px 2px #000; }
+
+.btn{ position:absolute;top:180px;z-index:15;width:50px;height:50px;border-radius:25px;
+      margin:0px 20px 0px 20px;color:#fff;background-color:#000;transition:1s ease;
+	  border:1px solid #000;cursor:pointer;outline:none; }
+
+#prev1{ right:0px; }
+#next1{ left:0px; }
+
+</style>
+<div class="wrapper">
+	<div class="slideshow">
+	
+		<button class="btn" id="next1">&#10094;</button>
+		 <div id="cover" class="pics">
+			<img src="img/001.jpg" />
+			<img src="img/002.jpg" />
+			<img src="img/003.jpg" />
+			<img src="img/004.jpg" />
+			<img src="img/005.jpg" />
+			<img src="img/006.jpg" />
+			<img src="img/007.jpg" />
+			<img src="img/008.jpg" />
+			<img src="img/009.jpg" />
+			<img src="img/010.jpg" />
+			<img src="img/011.jpg" />
+			<img src="img/012.jpg" />
+		 </div>
+		 <button class="btn" id="prev1">&#10095;</button>
+	</div>
+</div>
+</body>
+</html>
